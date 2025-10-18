@@ -10,15 +10,17 @@ try:
     if number > 5 or number < 1:
         print('I SAID FROM 1 TO 5')
     size = int(input('Enter size: '))
-    if number == 1:
+    if size < 0:
+        print('ANTIMATTER')
+    elif number == 1:
         print(size)
-    if number == 2:
+    elif number == 2:
         print(size/MG)
-    if number == 3:
+    elif number == 3:
         print(size/G)
-    if number == 4:
+    elif number == 4:
         print(size * T)
-    if number == 5:
+    elif number == 5:
         print(size * CE)
 except ValueError:
     print('need number >:(')
