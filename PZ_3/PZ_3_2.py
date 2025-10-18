@@ -6,12 +6,12 @@ G = 1000 # 1000 грамм в одном кг
 T = 1000 # 1000 кг в одной тонне
 CE = 100 # 100 кг в одном центнере
 try:
-    number = int(input('Enter a number from 1 to 5: '))
+    number = int(input('Enter a number from 1 to 5: ')) #Выбор единицы массы
     if number > 5 or number < 1:
         print('I SAID FROM 1 TO 5')
-    size = int(input('Enter size: '))
+    size = int(input('Enter size: ')) #Масса тела в этой единице
     if size < 0:
-        print('ANTIMATTER')
+        print('ANTIMATTER') #Масса не может быть отрицательна, либо это антиматерия
     elif number == 1:
         print(size)
     elif number == 2:
