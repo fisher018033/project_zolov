@@ -2,10 +2,10 @@
 
 try:
     M = int(input('enter size in kg: '))
+    T = 1000  # 1000 kg in 1 tonn
     if M < 0:
-        print("ANTIMATTER")
+        print("ANTIMATTER") #Масса не может быть отрицательной, либо это антиматерия
     else:
-      T = 1000  # 1000 kg in 1 tonn
       print(M // T, 'tonn')
 except ValueError:
-    print('I SAID SIZE, NOT A WORD')
+    print('I SAID SIZE')
