@@ -9,6 +9,6 @@ try:
     k = 1
     for mult in range(A, B + 1):
       k *= mult
-    print(k)
+    print('произведение всех чисел между A и B:', k)
 except ValueError:
   print('Неверно')
