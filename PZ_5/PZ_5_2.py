@@ -7,10 +7,13 @@ try:
   if ad < 0 or ad > 9 or ad2 < 0 or ad2 > 9:
     print('ОТ 0 ДО 9')
   else:
-    def AddRightDigit(bas, ad, ad2):
+    def AddRightDigit(bas, ad):
       return str(bas) + str(ad)
+    bas = AddRightDigit(bas, ad)
+    def AddAgain(bas, ad2):
       return str(bas) + str(ad2)
-    bas = AddRightDigit(bas, ad, ad2)
+    bas2 = AddAgain(bas, ad2)
     print(bas)
+    print(bas2)
 except ValueError:
   print('Неверно')
