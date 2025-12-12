@@ -9,19 +9,13 @@ try:
     for i in range(amount):
       num = int(input(f"Enter {i+1} number: "))
       numbers.append(num)
-    min = []
-    def mix(numbers):
-      for u in range(1, len(numbers)-1):
-        if numbers[u-1] < numbers[u] < numbers[u+1]:
-          min.append(numbers[u])
-      return min
-    print(mix(numbers))
-    sq = []
-    def mox(min):
-      for o in range(len(mix(numbers))):
-        o ** 2
-        sq.append(min[o])
-    print(sq)
-    print(mox(min))
+    def mix(lst):
+      result = lst.copy()
+      for i in range(1, len(lst) - 1):
+        if lst[i] < lst[i-1] and lst[i] < lst[i+1]:
+          result[i] = lst[i] ** 2
+      return result
+    print(f"Изначальный список: {numbers}")
+    print(f"Возведенные в квадрат локальные минимумы: {mix(numbers)}")
 except ValueError:
   print('nah')
