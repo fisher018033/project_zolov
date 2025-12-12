@@ -1,10 +1,13 @@
 #Дан целочисленный список размера 10. Вывести все содержащиеся в данном списке нечетные числа в порядке возрастания их индексов, а также их количество K.
 
-numbers = [2, 5, 1, 7, 8, 4, 6, 9, 10, 15]
-srebmun = []
-k = 0
-for u in range(len(numbers)):
-  if numbers[u] % 2 != 0:
-    k += 1
-    srebmun.append(numbers[u])
-print(f" Нечетные числа в порядке возрастания индексов: {srebmun}, количество чисел: {k}")
+try:
+  numbers = [2, 5, 1, 7, 8, 4, 6, 9, 10, 15]
+  srebmun = []
+  k = 0
+  for u in range(len(numbers)):
+    if numbers[u] % 2 != 0:
+      k += 1
+      srebmun.append(numbers[u])
+  print(f" Нечетные числа в порядке возрастания индексов: {srebmun}, количество чисел: {k}")
+except Exception as e:
+  print('nah')
