@@ -1,6 +1,6 @@
 # Измените имя на 'Jessa' во вложенном словаре.
 
-nested_student_dict = {
+student_dict = {
     "class": {
         "student": {
             "name": "Mike",
@@ -11,5 +11,5 @@ nested_student_dict = {
         }
     }
 }
-nested_student_dict["class"]["student"]["name"] = "Jessa"
+student_dict["class"]["student"]["name"] = "Jessa"
 print(nested_student_dict)
