@@ -6,9 +6,9 @@ tur = {
     "Радуга": {"США", "Испания", "Швеция", "Австралия"}
 }
 
-страны = ["Канада", "США"]
+cunts = ["Канада", "США"]
 
-for cunt in страны:
+for cunt in cunts:
     print(f"\nТуры в {cunt} можно приобрести в:")
     for agent, cunt_agent in tur.items():
         if cunt in cunt_agent:
