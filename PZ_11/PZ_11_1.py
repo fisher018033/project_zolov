@@ -3,13 +3,25 @@
 import random
 
 try:
-  fir = int(input('enter a number to start: '))
-  sec = int(input('enter a number to finish: '))
+  ent = int(input('Сколько хотите чисел в списке?:'))
   num = []
-  for col in range(num):
-    n = random.randint(fir, sec)
-    num.append(n)
-  print(num)
+  ch_num = []
+  oth_num = []
 
+  for col in range(ent):
+    n = random.randint(1,100)
+    num.append(n)
+
+  for ch in num:
+    if ch % 2 == 0:
+      ch_num.append(ch)
+    else:
+      oth_num.append(ch)
+
+  print(f'Исходная последовательность: {num}')
+  print(f'Четные числа: {ch_num}')
+  print(f'Остальные числа: {oth_num}')
+  print(f'Среднее арифметическое четных чисел: {sum(ch_num)/len(ch_num)}')
+  print(f'Среднее арифметическое остальных чисел: {sum(oth_num)/len(oth_num)}')
 except ValueError:
   print('Error')
