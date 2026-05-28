@@ -1,0 +1,13 @@
+import re
+
+with open('Dostoevsky.txt', 'r', encoding='utf-8') as f:
+    text = f.read()
+
+# Найти все годы (например: 1821 года, 1837 год, 1843 году и т.д.)
+years = re.findall(r'\b\d{4}\s*(?:года?|г\.|году?)\b', text)
+
+print("Найденные годы:")
+for year in years:
+    print(year)
+
+print(f"\nОбщее количество найденных годов: {len(years)}")

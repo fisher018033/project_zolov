@@ -1,27 +1,16 @@
-# Организовать и вывести последовательность из N случайных целых чисел. Из исходной последовательности организовать первую последовательность, содержащую четные числа, и вторую – для всех остальных. Найти среднее арифметическое в полученных последовательностях.
-
 import random
 
-try:
-  ent = int(input('Сколько хотите чисел в списке?:'))
-  num = []
-  ch_num = []
-  oth_num = []
+n = 12
+a = [random.randint(-20, 20) for _ in range(n)]
 
-  for col in range(ent):
-    n = random.randint(1,100)
-    num.append(n)
+even = [x for x in a if x % 2 == 0]
+odd = [x for x in a if x % 2 != 0]
 
-  for ch in num:
-    if ch % 2 == 0:
-      ch_num.append(ch)
-    else:
-      oth_num.append(ch)
+avg_even = sum(even) / len(even) if even else 0
+avg_odd = sum(odd) / len(odd) if odd else 0
 
-  print(f'Исходная последовательность: {num}')
-  print(f'Четные числа: {ch_num}')
-  print(f'Остальные числа: {oth_num}')
-  print(f'Среднее арифметическое четных чисел: {sum(ch_num)/len(ch_num)}')
-  print(f'Среднее арифметическое остальных чисел: {sum(oth_num)/len(oth_num)}')
-except ValueError:
-  print('Error')
+print("Исходная последовательность:", a)
+print("Четные числа:", even)
+print("Нечетные числа:", odd)
+print("Среднее арифметическое четных:", round(avg_even, 2))
+print("Среднее арифметическое нечетных:", round(avg_odd, 2))
