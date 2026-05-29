@@ -79,7 +79,7 @@ def clear_fields():
     price_entry.delete(0, tk.END)
     country_entry.delete(0, tk.END)
 
-# ==================== GUI ====================
+#GUI
 root = tk.Tk()
 root.title("Аптека — Управление лекарствами")
 root.geometry("1000x600")
